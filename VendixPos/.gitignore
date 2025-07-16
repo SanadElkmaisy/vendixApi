@@ -1,0 +1,21 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.vs/
+.vscode/
+
+# Sensitive data
+appsettings.Development.json
+appsettings.private.json
+secrets.json
+
+# NuGet
+packages/
+.nuget/
+
+# Logs
+logs/
+*.log

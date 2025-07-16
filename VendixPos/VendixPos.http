@@ -1,0 +1,6 @@
+@VendixPos_HostAddress = http://localhost:5114
+
+GET {{VendixPos_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
