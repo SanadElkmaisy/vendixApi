@@ -2,8 +2,8 @@
 {
     public class SellInfo
     {
-        public string Customer { get; set; }
-        public string PayMethod { get; set; }
+        public int Customer { get; set; }
+        public int PayMethod { get; set; }
         public decimal TotalValue { get; set; }
         public decimal Sales { get; set; }
         public decimal TotalAll { get; set; }

@@ -6,7 +6,7 @@ namespace VendixPos.DTOs
     {
         public SellInfo SellInfo { get; set; }
         public List<SellDetails> SellDetails { get; set; }
-        public List<Inventory> InventoryMovements { get; set; }
+        public List<Inventory> Inventory { get; set; }
         public SellPayment Payment { get; set; }
         public int UserId { get; set; }
     }

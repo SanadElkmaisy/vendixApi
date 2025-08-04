@@ -25,16 +25,42 @@ namespace VendixPos.Services
         public async Task<int> CreateSellTransactionAsync(
             SellInfo sellInfo,
             List<SellDetails> sellDetails,
-            List<Inventory> inventoryMovements,
+            List<Inventory> inventory,
             SellPayment payment,
             int userId)
         {
             try
             {
+                sellInfo.InsertedBy = 1;
+                sellInfo.UpdatedBy = 1;
+                sellInfo.InsertedDate = DateTime.UtcNow;
+                sellInfo.UpdatedDate = DateTime.UtcNow;
+                sellInfo.Status = 1;
+
+                foreach (var item in inventory)
+                {
+                    item.InvoiceDate = DateTime.UtcNow;
+                    item.InventoryID = 1;
+                    item.InsertedDate = DateTime.UtcNow;
+                    item.UpdatedDate = DateTime.UtcNow;
+                }
+
+                foreach (var detail in sellDetails)
+                {
+
+
+                    detail.InsertedBy = 1;
+                    detail.UpdatedBy = 1;
+                    detail.InserteDDate = DateTime.UtcNow;
+                    detail.UpdatedDate = DateTime.UtcNow;
+
+                }
+
+                payment.InsertDate = DateTime.UtcNow;
                 _logger.LogInformation("Starting sell transaction creation for user {UserId}", userId);
 
                 // Map Inventory to InventoryTvp
-                var inventoryTvpList = _mapper.Map<List<InventoryTvp>>(inventoryMovements);
+                var inventoryTvpList = _mapper.Map<List<InventoryTvp>>(inventory);
                 _logger.LogDebug("Mapped {Count} inventory movements to TVP", inventoryTvpList.Count);
 
                 // Convert all models to DataTables for TVPs

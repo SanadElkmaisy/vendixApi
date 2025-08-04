@@ -6,10 +6,10 @@ namespace VendixPos.DTOs
     public class SellInfoRequestDto
     {
         [Required]
-        public string Customer { get; set; }
+        public int Customer { get; set; }
 
         [Required]
-        public string PayMethod { get; set; }
+        public int PayMethod { get; set; }
 
         [Range(0, double.MaxValue)]
         public decimal TotalValue { get; set; }
@@ -30,8 +30,8 @@ namespace VendixPos.DTOs
     {
         public int SellID { get; set; }
         public string InvoiceNumber { get; set; }
-        public string Customer { get; set; }
-        public string PayMethod { get; set; }
+        public int Customer { get; set; }
+        public int PayMethod { get; set; }
         public decimal TotalAmount { get; set; }
         public DateTime SellDate { get; set; }
         public bool Delivered { get; set; }

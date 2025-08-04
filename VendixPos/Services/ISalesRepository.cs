@@ -8,7 +8,7 @@ namespace VendixPos.Services
         Task<int> CreateSellTransactionAsync(
             SellInfo sellInfo,
             List<SellDetails> sellDetails,
-            List<Inventory> inventoryMovements,
+            List<Inventory> inventory,
             SellPayment payment,
             int userId);
 

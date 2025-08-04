@@ -26,7 +26,7 @@ namespace VendixPos.Controllers
                 var result = await _salesRepo.CreateSellTransactionAsync(
                     model.SellInfo,
                     model.SellDetails,
-                    model.InventoryMovements,
+                    model.Inventory,
                     model.Payment,
                     model.UserId);
 

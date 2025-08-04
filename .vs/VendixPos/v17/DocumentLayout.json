@@ -1,48 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\sanad\\source\\repos\\VendixPos\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\.gitignore||{68B46364-D378-42F2-9E72-37D86C5F4468}",
-      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\.gitignore||{68B46364-D378-42F2-9E72-37D86C5F4468}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\vendixpos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\vendixpos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\services\\salesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\services\\salesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\dtos\\inventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\dtos\\inventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\models\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\models\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\services\\isalesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\services\\isalesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -50,131 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\.gitignore",
-              "RelativeDocumentMoniker": "VendixPos\\.gitignore",
-              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\.gitignore",
-              "RelativeToolTip": "VendixPos\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-07-16T11:44:38.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\.gitignore",
-              "RelativeDocumentMoniker": "VendixPos\\.gitignore",
-              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\.gitignore",
-              "RelativeToolTip": "VendixPos\\.gitignore",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-07-16T11:44:12.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VendixPos.csproj",
-              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\VendixPos.csproj",
-              "RelativeDocumentMoniker": "VendixPos\\VendixPos.csproj",
-              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\VendixPos.csproj",
-              "RelativeToolTip": "VendixPos\\VendixPos.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-16T11:41:13.245Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MappingProfiles.cs",
-              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\MappingProfiles.cs",
-              "RelativeDocumentMoniker": "VendixPos\\MappingProfiles.cs",
-              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\MappingProfiles.cs",
-              "RelativeToolTip": "VendixPos\\MappingProfiles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T11:07:52.435Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Program.cs",
-              "RelativeDocumentMoniker": "VendixPos\\Program.cs",
-              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Program.cs",
-              "RelativeToolTip": "VendixPos\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACcAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T11:07:12.322Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Inventory.cs",
-              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Models\\Inventory.cs",
-              "RelativeDocumentMoniker": "VendixPos\\Models\\Inventory.cs",
-              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Models\\Inventory.cs",
-              "RelativeToolTip": "VendixPos\\Models\\Inventory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T10:55:52.565Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "InventoryDto.cs",
-              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\DTOs\\InventoryDto.cs",
-              "RelativeDocumentMoniker": "VendixPos\\DTOs\\InventoryDto.cs",
-              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\DTOs\\InventoryDto.cs",
-              "RelativeToolTip": "VendixPos\\DTOs\\InventoryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T10:55:30.65Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SalesRepository.cs",
-              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Services\\SalesRepository.cs",
-              "RelativeDocumentMoniker": "VendixPos\\Services\\SalesRepository.cs",
-              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Services\\SalesRepository.cs",
-              "RelativeToolTip": "VendixPos\\Services\\SalesRepository.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAnwGQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T12:08:14.542Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SalesController.cs",
-              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Controllers\\SalesController.cs",
-              "RelativeDocumentMoniker": "VendixPos\\Controllers\\SalesController.cs",
-              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Controllers\\SalesController.cs",
-              "RelativeToolTip": "VendixPos\\Controllers\\SalesController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAEwBgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T11:46:25.215Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ISalesRepository.cs",
-              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Services\\ISalesRepository.cs",
-              "RelativeDocumentMoniker": "VendixPos\\Services\\ISalesRepository.cs",
-              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Services\\ISalesRepository.cs",
-              "RelativeToolTip": "VendixPos\\Services\\ISalesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T12:26:06.056Z"
             }
           ]
         }
