@@ -1,7 +1,40 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\sanad\\source\\repos\\VendixPos\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\models\\fastgroupwebpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\models\\fastgroupwebpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\models\\fastitemswebpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\models\\fastitemswebpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\controllers\\fastgroupwebposcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\controllers\\fastgroupwebposcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\dtos\\itembasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\dtos\\itembasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\services\\itemsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\services\\itemsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|c:\\users\\sanad\\source\\repos\\vendixpos\\vendixpos\\services\\iitemsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD034378-30EE-4072-A414-C616A66780F3}|VendixPos\\VendixPos.csproj|solutionrelative:vendixpos\\services\\iitemsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +42,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FastITemsWebPos.cs",
+              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Models\\FastITemsWebPos.cs",
+              "RelativeDocumentMoniker": "VendixPos\\Models\\FastITemsWebPos.cs",
+              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Models\\FastITemsWebPos.cs",
+              "RelativeToolTip": "VendixPos\\Models\\FastITemsWebPos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T09:15:46.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FastGroupWebPos.cs",
+              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Models\\FastGroupWebPos.cs",
+              "RelativeDocumentMoniker": "VendixPos\\Models\\FastGroupWebPos.cs",
+              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Models\\FastGroupWebPos.cs",
+              "RelativeToolTip": "VendixPos\\Models\\FastGroupWebPos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T09:09:53.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FastGroupWebPosController.cs",
+              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Controllers\\FastGroupWebPosController.cs",
+              "RelativeDocumentMoniker": "VendixPos\\Controllers\\FastGroupWebPosController.cs",
+              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Controllers\\FastGroupWebPosController.cs",
+              "RelativeToolTip": "VendixPos\\Controllers\\FastGroupWebPosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T09:08:28.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SupplierController.cs",
+              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Controllers\\SupplierController.cs",
+              "RelativeDocumentMoniker": "VendixPos\\Controllers\\SupplierController.cs",
+              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Controllers\\SupplierController.cs",
+              "RelativeToolTip": "VendixPos\\Controllers\\SupplierController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T09:07:41.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ItemsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Services\\ItemsRepository.cs",
+              "RelativeDocumentMoniker": "VendixPos\\Services\\ItemsRepository.cs",
+              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Services\\ItemsRepository.cs",
+              "RelativeToolTip": "VendixPos\\Services\\ItemsRepository.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T10:47:29.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ItemBaseDto.cs",
+              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\DTOs\\ItemBaseDto.cs",
+              "RelativeDocumentMoniker": "VendixPos\\DTOs\\ItemBaseDto.cs",
+              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\DTOs\\ItemBaseDto.cs",
+              "RelativeToolTip": "VendixPos\\DTOs\\ItemBaseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T10:47:04.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IItemsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Services\\IItemsRepository.cs",
+              "RelativeDocumentMoniker": "VendixPos\\Services\\IItemsRepository.cs",
+              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Services\\IItemsRepository.cs",
+              "RelativeToolTip": "VendixPos\\Services\\IItemsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T09:52:59.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Controllers\\ItemsController.cs",
+              "RelativeDocumentMoniker": "VendixPos\\Controllers\\ItemsController.cs",
+              "ToolTip": "C:\\Users\\sanad\\source\\repos\\VendixPos\\VendixPos\\Controllers\\ItemsController.cs",
+              "RelativeToolTip": "VendixPos\\Controllers\\ItemsController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwC8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T09:53:05.508Z",
+              "EditorCaption": ""
             }
           ]
         }

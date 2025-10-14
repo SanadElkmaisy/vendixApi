@@ -6,16 +6,43 @@ using System.Threading.Tasks;
 using System.Data.SqlTypes;
 using VendixPos.DTOs;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace VendixPos.Services
 {
     public class ItemsRepository : IItemsRepository
     {
         private readonly AppDbContext _context;
+        private readonly ILogger<SelectItemBarNumSto> _logger;
 
-        public ItemsRepository(AppDbContext context)
+        public ItemsRepository(AppDbContext context, ILogger<SelectItemBarNumSto> logger)
         {
             _context = context;
+            _logger = logger;
+
+        }
+
+        // In ItemsRepository.cs - Add this method
+        public async Task<IEnumerable<ItemUnitDto>> GetItemUnitsAsync(int itemId)
+        {
+            try
+            {
+                return await _context.Units
+                    .Where(u => u.ItemID == itemId && !u.IsDeleted)
+                    .Select(u => new ItemUnitDto
+                    {
+                        SecondUnit = u.SecondUnit,
+                        UnitQuantity = u.UnitQuantity,
+                        UnitPrice = u.UnitPrice,
+                        LowPrice = u.LowPrice
+                    })
+                    .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error fetching units for item {ItemId}", itemId);
+                throw;
+            }
         }
         private byte[] GetDefaultImageBytes()
         {
@@ -51,7 +78,9 @@ namespace VendixPos.Services
                         Pic = tri.item.Pic ?? GetDefaultImageBytes(),
                         UnitPrice = unit.UnitPrice,
                         SecondUnit = unit.SecondUnit,
-                        UnitQuantity = unit.UnitQuantity
+                        UnitQuantity = unit.UnitQuantity,
+                        ItemQuantity = tri.item.ItemQuantity,
+                        ItemNoQuan = (bool)tri.item.ItemNoQuan
                     }
                 )
                 .ToListAsync();
@@ -213,6 +242,6 @@ namespace VendixPos.Services
             }
         }
 
-        
+      
     }
 }

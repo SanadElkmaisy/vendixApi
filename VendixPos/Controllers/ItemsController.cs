@@ -41,7 +41,20 @@ namespace VendixPos.Controllers
         }
 
 
-
+        [HttpGet("{itemId}/units")]
+        public async Task<ActionResult<IEnumerable<ItemUnitDto>>> GetItemUnitsAsync(int itemId)
+        {
+            try
+            {
+                var units = await _repository.GetItemUnitsAsync(itemId);
+                return Ok(units);
+            }
+            catch (System.Exception ex)
+            {
+                // Log the exception if you have a logger
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
 
         public ItemsController(IItemsRepository repository, IMapper mapper)
         {

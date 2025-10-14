@@ -20,10 +20,10 @@
         public int ItemID { get; set; }
         public string ItemName { get; set; }
         public int Quantity { get; set; }
-        public string MovementType { get; set; } // "IN", "OUT", "ADJUSTMENT"
+        public string MovementType { get; set; }
         public DateTime MovementDate { get; set; }
         public int? SupplierID { get; set; }
-        public string Reference { get; set; } // Invoice/Sell number
+        public string Reference { get; set; } 
     }
 
     public class InventoryLevelDto

@@ -20,5 +20,7 @@ namespace VendixPos.Services
         Task UpdateFastGroupAsync(FastGroupWebPos group);
         Task DeleteFastGroupAsync(int id);
 
+        Task<IEnumerable<ItemUnitDto>> GetItemUnitsAsync(int itemId);
+
     }
 }
