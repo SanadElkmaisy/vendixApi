@@ -40,6 +40,10 @@ namespace VendixPos.Models
         public string ItemColor { get; set; }
 
         public decimal? AccType { get; set; }
-                                                                                
+
+        public ICollection<Units> Units { get; set; } = new List<Units>();
+
+        public ICollection<Barcode> Barcodes { get; set; } = new List<Barcode>();
+
     }
 }

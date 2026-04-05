@@ -7,6 +7,7 @@ namespace VendixPos.Models
         [Key]
         public int BarcodeID { get; set; }
         public int ItemId { get; set; }
+        public Item Item { get; set; }
         public string BarcodeValue { get; set; }
 
     }

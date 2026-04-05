@@ -33,13 +33,13 @@ namespace VendixPos.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
-        [ResponseCache(Duration = 30, VaryByQueryKeys = new[] { "query", "inventoryNumber" })]
+        [ResponseCache(Duration = 30, VaryByQueryKeys = new[] { "searchTerm", "inventoryNumber" })]
         [HttpGet("search")]
-        public async Task<IActionResult> SearchItems([FromQuery] string query, int InventoryNumber)
+        public async Task<IActionResult> SearchItems([FromQuery] string SearchTerm, int InventoryNumber)
         {
             try
             {
-                var items = await _spRepository.SearchItems(query, InventoryNumber);
+                var items = await _spRepository.SearchItems(SearchTerm, InventoryNumber);
                 return Ok(items);
             }
             catch (Exception ex)

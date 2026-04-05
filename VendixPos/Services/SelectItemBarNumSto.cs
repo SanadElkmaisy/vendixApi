@@ -20,36 +20,24 @@ namespace VendixPos.Services
             _context = context;
             _logger = logger;
         }
-        Task<List<SelectItemBarNum>> ISelectItemBarSto.SearchItems([FromQuery] string query, [FromQuery] int InventoryNumber)
+        Task<List<SelectItemBarNum>> ISelectItemBarSto.SearchItems([FromQuery] string SearchTerm, [FromQuery] int InventoryNumber)
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(query))
+                if (string.IsNullOrWhiteSpace(SearchTerm))
                     throw new ArgumentException("Search query cannot be empty");
 
-                if (query.Trim().All(char.IsDigit))
-                {
+              
                     // Barcode search
                     var results = ExecuteStoredProcedureAsync(
-                        "dbo.SelectItemBarNum",
+                        "dbo.SelectMultipleNamBar",
                         MapToItemResult, // Your existing mapper
-                        new SqlParameter("@ItemNumBar", query.Trim()),
+                        new SqlParameter("@SearchTerm", SearchTerm.Trim()),
                         new SqlParameter("@InventoryNumber", InventoryNumber));
                  
                   
                     return results;
-                }
-                else
-                {
-                    // Name search
-                    var results = ExecuteStoredProcedureAsync(
-                        "dbo.Selectitem",
-                        MapToItemResult, // New mapper
-                        new SqlParameter("@Item", $"%{query.Trim()}%"),
-                        new SqlParameter("@InventoryNumber", InventoryNumber));
-
-                    return results;
-                }
+               
             }
             catch (Exception ex)
             {
@@ -112,7 +100,8 @@ namespace VendixPos.Services
                 ItemNoQuan = GetBooleanSafe(reader, "ItemNoQuan"),
                 Checked = GetBooleanSafe(reader, "Checked"),
                 avgitem = GetDoubleSafe(reader, "avgitem"),
-                InvoiceItemPrice = GetFloatSafe(reader, "InvoiceItemPrice")
+                InvoiceItemPrice = GetFloatSafe(reader, "InvoiceItemPrice"),
+                lowestItemQun = GetInt32Safe(reader, "lowestItemQun") 
             };
         }
 

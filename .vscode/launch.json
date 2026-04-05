@@ -1,6 +1,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+        
         {
             // Use IntelliSense to find out which attributes exist for C# debugging
             // Use hover for the description of the existing attributes
@@ -9,8 +10,8 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            // If you have changed target frameworks, make sure to update the program path.
-            "program": "../../Desktop/VendixPos/Debug/net8.0/VendixPos.dll",
+            // The program path should point to the built DLL within your project's bin folder.
+            "program": "${workspaceFolder}/VendixPos/bin/Debug/net8.0/VendixPos.dll",
             "args": [],
             "cwd": "${workspaceFolder}/VendixPos",
             "stopAtEntry": false,

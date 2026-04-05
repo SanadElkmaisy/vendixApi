@@ -7,6 +7,7 @@ namespace VendixPos.Models
         [Key]
         public int UnitID { get; set; }
         public int ItemID { get; set; }
+        public Item Item { get; set; }
         public string SecondUnit { get; set; }
         public int UnitQuantity { get; set; }
         public double UnitPrice { get; set; }
@@ -16,7 +17,7 @@ namespace VendixPos.Models
         public int InsertedBy { get; set; }
         public int UpdatedBy { get; set; }
         public bool IsDeleted { get; set; }
-        public double LowPrice { get; set; }
+        public double? LowPrice { get; set; }
 
     }
 }

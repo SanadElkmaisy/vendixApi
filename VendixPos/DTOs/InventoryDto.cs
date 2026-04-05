@@ -3,8 +3,8 @@
     public class InventoryTvp
     {
         public int InventoryAddID { get; set; }
-        public int InventoryState { get; set; }
-        public decimal InventoryInvSUQ { get; set; }
+        public byte InventoryState { get; set; }
+        public int InventoryInvSUQ { get; set; }
         public int InventoryItemNum { get; set; }
         public int InventoryInvoNum { get; set; }
         public int SupplierID { get; set; }
@@ -33,4 +33,14 @@
         public int CurrentStock { get; set; }
         public int ReorderLevel { get; set; }
     }
+
+
+    public class AddInventoryDto
+    {
+        public int Id { get; set; }
+        public string Inventroy { get; set; }
+      
+    }
+
+
 }

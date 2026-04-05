@@ -6,7 +6,7 @@ namespace VendixPos.Services
     {
 
         Task<List<SelectItemBarNum>> GetItemsFromStoredProcedureAsync(string ItemNumBar ,int InventoryNumber);
-        Task<List<SelectItemBarNum>> SearchItems(string query, int InventoryNumber);
+        Task<List<SelectItemBarNum>> SearchItems(string SearchTerm, int InventoryNumber);
      
        
     }

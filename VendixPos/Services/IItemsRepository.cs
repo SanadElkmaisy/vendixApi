@@ -22,5 +22,8 @@ namespace VendixPos.Services
 
         Task<IEnumerable<ItemUnitDto>> GetItemUnitsAsync(int itemId);
 
+        Task<ItemResponseDto> CreateItemAsync(CreateItemDto itemDto, int userId);
+        Task<bool> BarcodeExistsAsync(string barcodeValue);
+
     }
 }

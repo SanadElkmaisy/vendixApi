@@ -1,12 +1,15 @@
-﻿using VendixPos.Data;
-using VendixPos.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Data.SqlTypes;
-using VendixPos.DTOs;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlTypes;
+using System.Text.Json;
+using System.Threading.Tasks;
+using VendixPos.Data;
+using VendixPos.DTOs;
+using VendixPos.DTOs.Exceptions;
+using VendixPos.Models;
 
 namespace VendixPos.Services
 {
@@ -22,7 +25,98 @@ namespace VendixPos.Services
 
         }
 
-        // In ItemsRepository.cs - Add this method
+        public async Task<bool> BarcodeExistsAsync(string barcodeValue)
+        {
+            return await _context.Barcode
+                .AnyAsync(b => b.BarcodeValue == barcodeValue);
+        }
+
+        public async Task<ItemResponseDto> CreateItemAsync(CreateItemDto itemDto, int userId)
+        {
+            await using var transaction = await _context.Database.BeginTransactionAsync();
+
+            try
+            {
+                _logger.LogInformation("Starting item creation for user {UserId}", userId);
+
+                // 1. Validate input
+                if (string.IsNullOrWhiteSpace(itemDto.BarcodeValue))
+                    throw new InvalidOperationException("Barcode is required");
+
+                if (await BarcodeExistsAsync(itemDto.BarcodeValue))
+                    throw new InvalidOperationException($"Barcode '{itemDto.BarcodeValue}' already exists");
+
+                // 2. Handle image
+                byte[]? imageBytes = null;
+                if (itemDto.ItemImage?.Length > 0)
+                {
+                    using var memoryStream = new MemoryStream();
+                    await itemDto.ItemImage.CopyToAsync(memoryStream);
+                    imageBytes = memoryStream.ToArray();
+                }
+
+                // 3. Create Item
+                var item = new Item
+                {
+                    DepartmentID = itemDto.DepartmentID,
+                    ItemNum = itemDto.ItemNum,
+                    ItemName = itemDto.ItemName,
+                    Ranking = itemDto.Ranking,
+                    ItemQuantity = itemDto.ItemQuantity ?? 0,
+                    ItemInactive = itemDto.ItemInactive ?? false,
+                    ItemColor = itemDto.ItemColor ?? string.Empty,
+                    ItemNoQuan = itemDto.ItemNoQuan ?? false,
+                    Pic = imageBytes,
+                    InsertedBy = userId,
+                    UpdatedBy = userId,
+                    InsertedDate = DateTime.UtcNow,
+                    UpdatedDate = DateTime.UtcNow,
+
+                    // ✅ Add Barcode via navigation
+                    Barcodes = new List<Barcode>
+            {
+                new Barcode
+                {
+                    BarcodeValue = itemDto.BarcodeValue
+                }
+            },
+
+                 
+                };
+                var units = JsonSerializer.Deserialize<List<CreateItemUnitDto>>(itemDto.UnitsJson);
+                itemDto.Units = units;
+                // 4. Add item ONLY
+                await _context.Items.AddAsync(item);
+
+                // 5. Save everything in ONE go
+                await _context.SaveChangesAsync();
+
+                await transaction.CommitAsync();
+
+                _logger.LogInformation("Item {ItemId} created successfully", item.ItemID);
+
+                return new ItemResponseDto
+                {
+                    ItemID = item.ItemID,
+                    ItemName = item.ItemName,
+                    BarcodeValue = itemDto.BarcodeValue,
+                    Message = "Item created successfully"
+                };
+            }
+            catch (InvalidOperationException)
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
+            catch (Exception ex)
+            {
+                await transaction.RollbackAsync();
+                _logger.LogError(ex, "Failed to create item");
+                throw new RepositoryException("Failed to create item", ex);
+            }
+        }
+
+
         public async Task<IEnumerable<ItemUnitDto>> GetItemUnitsAsync(int itemId)
         {
             try

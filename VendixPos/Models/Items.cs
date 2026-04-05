@@ -4,7 +4,7 @@
     {
         public int ItemID { get; set; }
         public string ItemName { get; set; }
-        public decimal UnitPrice { get; set; }
+        public double UnitPrice { get; set; }
         public byte[] Pic { get; set; }
 
     }

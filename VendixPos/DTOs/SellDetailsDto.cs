@@ -14,13 +14,13 @@ namespace VendixPos.DTOs
         public decimal Quantity { get; set; }
 
         [Range(0, double.MaxValue)]
-        public decimal UnitPrice { get; set; }
+        public double UnitPrice { get; set; }
 
         public decimal? Discount { get; set; }
         public string WashType { get; set; }
 
         [JsonIgnore] // Calculated on server
-        public decimal LineTotal => (UnitPrice * Quantity) - (Discount ?? 0);
+        public decimal LineTotal => ((decimal)UnitPrice * Quantity) - (Discount ?? 0);
     }
 
     public class SellDetailsResponseDto

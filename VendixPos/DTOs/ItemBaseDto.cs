@@ -14,7 +14,7 @@
     public class ItemUnitDto
     {
         public string SecondUnit { get; set; }
-        public double UnitQuantity { get; set; }
+        public int UnitQuantity { get; set; }
         public double UnitPrice { get; set; }
         public double? LowPrice { get; set; }
     }

@@ -21,7 +21,72 @@ namespace VendixPos.Services
             _logger = logger;
             _mapper = mapper;
         }
+        public async Task<List<SalesTransactionHistoryDto>> GetTransactionHistoryAsync(
+     DateTime? fromDate = null,
+     DateTime? toDate = null,
+     string searchTerm = null,
+     int? page = 1,
+     int? pageSize = 50)
+        {
+            try
+            {
+                _logger.LogInformation("Retrieving transaction history");
 
+                var fromDateParam = fromDate.HasValue ? fromDate.Value : (object)DBNull.Value;
+                var toDateParam = toDate.HasValue ? toDate.Value : (object)DBNull.Value;
+                var searchTermParam = searchTerm ?? (object)DBNull.Value;
+
+                var parameters = new[]
+                {
+            new SqlParameter("@FromDate", fromDateParam) { SqlDbType = SqlDbType.DateTime },
+            new SqlParameter("@ToDate", toDateParam) { SqlDbType = SqlDbType.DateTime },
+            new SqlParameter("@SearchTerm", searchTermParam) { SqlDbType = SqlDbType.NVarChar },
+            new SqlParameter("@Page", page ?? 1) { SqlDbType = SqlDbType.Int },
+            new SqlParameter("@PageSize", pageSize ?? 50) { SqlDbType = SqlDbType.Int }
+        };
+
+                var transactions = new List<SalesTransactionHistoryDto>();
+
+                using (var command = _context.Database.GetDbConnection().CreateCommand())
+                {
+                    command.CommandText = "[dbo].[GetTransactionHistory]";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddRange(parameters);
+
+                    _context.Database.OpenConnection();
+
+                    using (var reader = await command.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            var transaction = new SalesTransactionHistoryDto
+                            {
+                                // Handle potential DBNull and type conversions
+                                SellID = reader["SellID"] != DBNull.Value ? Convert.ToInt64(reader["SellID"]) : 0,
+                                InvoNumber = reader["InvoNumber"] != DBNull.Value ? Convert.ToInt64(reader["InvoNumber"]) : 0,
+                                PaymentMethodNames = reader["PaymentMethodNames"]?.ToString() ?? "",
+                                TotalAll = reader["TotalAll"] != DBNull.Value ? Convert.ToDecimal(reader["TotalAll"]) : 0,
+                                InsertedDate = reader["InsertedDate"] != DBNull.Value ? Convert.ToDateTime(reader["InsertedDate"]) : DateTime.MinValue,
+                                SupplierName = reader["SupplierName"]?.ToString() ?? "",
+                                InvoiceType = reader["InvoiceType"]?.ToString() ?? "",
+                                FullName = reader["FullName"]?.ToString() ?? "",
+                                Delivered = reader["Delivered"] != DBNull.Value && Convert.ToBoolean(reader["Delivered"]),
+                                Customer = reader["Customer"] != DBNull.Value ? Convert.ToInt32(reader["Customer"]) : (int?)null
+                            };
+                            transactions.Add(transaction);
+                        }
+                    }
+                }
+
+                _logger.LogDebug("Retrieved {Count} transactions", transactions.Count);
+                return transactions;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error retrieving transaction history");
+                throw new RepositoryException("Failed to retrieve transaction history", ex);
+            }
+        }
         public async Task<int> CreateSellTransactionAsync(
             SellInfo sellInfo,
             List<SellDetails> sellDetails,
